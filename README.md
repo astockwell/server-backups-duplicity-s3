@@ -17,11 +17,13 @@ Useage
 - Ensure you have gpg and duplicity installed: `yum install gpg duplicity`
 - Save the script to your server, preferably in a folder that will also support temporary storage of backups, e.g. `/backups`
 - Create a read-only MySQL user to perform the database dumps:
+
 ```
 CREATE USER 'backupuser'@'localhost' IDENTIFIED BY '<password>';
 GRANT SELECT , RELOAD , FILE , SUPER , LOCK TABLES , SHOW VIEW ON * . * TO  'backupuser'@'localhost' IDENTIFIED BY '<password>' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 flush privileges;
 ```
+
 - Configure the variables in the script, whether inline or as environmental variables. You will need to generate a [gpg key](http://www.gnupg.org/documentation/manuals/gnupg/OpenPGP-Key-Management.html#OpenPGP-Key-Management) to use the encryption settings in this file. See [Randys.org](http://web.archive.org/web/20120302054810/http://www.randys.org/2007/11/16/how-to-automated-backups-to-amazon-s-s3-with-duplicity/)'s explanation of this process for details.
 - TEST
 - Setup a cron job to run the script as often as you like (recommended once/daily). It should be fairly self-maintaining, cleaning out old backups, etc.
