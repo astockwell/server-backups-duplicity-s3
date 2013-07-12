@@ -2,7 +2,7 @@ LAMP Server Backups to S3 with Duplicity
 ========================================
 
 Bash script to backup a LAMP server to Amazon S3 with [Duplicity](http://duplicity.nongnu.org/), including MySQL databases.
-Duplicity is "_[an] Encrypted bandwidth-efficient backup using the rsync algorithm_", and an amazingy simple backup tool that works with Amazon S3.
+Duplicity is _[an] Encrypted bandwidth-efficient backup using the rsync algorithm_, and an amazingy simple backup tool that works with Amazon S3.
 
 This script was reasonably tested to work on a CentOS 5.7 MediaTemple DV server, but should work elsewhere.
 
@@ -28,7 +28,7 @@ chmod 0700 /backups/backup.sh
 Credits
 -------
 
-This script was made by standing on the shoulders of giants. Credit and thanks go out to
+This script was made possible by standing on the shoulders of giants. Credit and thanks go out to
 [Tim Riley](http://icelab.com.au/articles/easy-server-backups-to-amazon-s3-with-duplicity/),
 [John Schember](http://john.nachtimwald.com/2010/08/07/duplicity-backup-script/),
 and [Sam Hassell](http://samhassell.com/backups-with-amazon-s3-and-duplicity/).
