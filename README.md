@@ -11,7 +11,7 @@ The default configuration of the script will perform a full backup of files/dump
 **Backups on S3 older than 6 months are automatically purged.**
 
 
-Useage
+Usage
 ---------------------
 
 - Ensure you have gpg and duplicity installed: `yum install gpg duplicity`
