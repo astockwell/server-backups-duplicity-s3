@@ -56,7 +56,7 @@ if [[ -n "$BACKUPMYSQL" && "$BACKUPMYSQL" -gt 0 ]]; then
 	do
 		if [ "$db" != "information_schema" ]; then
 			echo mysqldump $db
-			$MYSQLDUMP --opt --net_buffer_length=75000 -u$MUSER -p$MPASS -h$MHOST $db | $GZIP -9 > $MYSQLTMPDIR/$db--$(date +"%Y.%m.%d_%H.%M").sql.gz
+			$MYSQLDUMP --single-transaction --opt --net_buffer_length=75000 -u$MUSER -p$MPASS -h$MHOST $db | $GZIP -9 > $MYSQLTMPDIR/$db--$(date +"%Y.%m.%d_%H.%M").sql.gz
 		fi
 	done
 	# Error handling
